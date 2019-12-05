@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3736326169286064633}
   m_Layer: 0
   m_Name: basket_MDL_v001
-  m_TagString: Untagged
+  m_TagString: basket
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

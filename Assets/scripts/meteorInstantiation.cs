@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class meteorInstantiation : MonoBehaviour
 {
-    public GameObject meteor; 
+    public GameObject meteor;
     private int spawnCount=1;
     private float posY;
     private float posX;
     private float posZ;
     private double spawnTime;
     private float elapsedTime = 0.0f;
-    private float currentTime = 0.0f;
+    private float countTime = 0.0f;
 
     // Start is called before the first frame update
     void Start()
     {
         spawnTime = 3;
+       
+
     }
 
     // Update is called once per frame
@@ -25,23 +27,27 @@ public class meteorInstantiation : MonoBehaviour
         instantiateRandomized();
     }
 
+    // custom method that randomizes the spawn location of the object
     void instantiateRandomized ()
     {
         elapsedTime += Time.deltaTime;
-        currentTime++;
+        countTime++;
         
 
-        if (currentTime % 300 == 0)
+        //this bit of code lessens the time between object spawning when the countTime has no remainder when divided by the number
+        if (countTime % 300 == 0)
         {
             spawnTime = spawnTime - 0.25;
             
         }
 
+        //When the spawn time gets too low, this code sets a cap on the value
         if (spawnTime < 1)
         {
             spawnTime = 1;
         }
 
+        //this code generates the object based on the spawn time and randomized coordinates
         if (elapsedTime > spawnTime)
         {
             elapsedTime = 0;
@@ -54,8 +60,7 @@ public class meteorInstantiation : MonoBehaviour
                 Instantiate(meteor, new Vector3(posX, posY, posZ), Quaternion.identity);
             }
             
-            
-        }
+        } 
         
     }
 }
