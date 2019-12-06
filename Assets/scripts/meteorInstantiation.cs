@@ -53,9 +53,9 @@ public class meteorInstantiation : MonoBehaviour
             elapsedTime = 0;
             for (int n=1; n<=spawnCount; n++)
             {
-                posX = Random.Range(-10, 10);
-                posZ = Random.Range(-10, 10);
-                posY = Random.Range(15, 20);
+                posX = Random.Range(-5, 5);
+                posZ = Random.Range(-5, 5);
+                posY = Random.Range(35, 40);
 
                 Instantiate(meteor, new Vector3(posX, posY, posZ), Quaternion.identity);
             }
