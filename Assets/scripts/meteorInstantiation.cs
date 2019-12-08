@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class meteorInstantiation : MonoBehaviour
 {
-    public GameObject meteor;
+    public GameObject meteor1;
+    public GameObject meteor2;
+    public GameObject meteor3;
     private int spawnCount=1;
     private float posY;
     private float posX;
@@ -12,6 +14,7 @@ public class meteorInstantiation : MonoBehaviour
     private double spawnTime;
     private float elapsedTime = 0.0f;
     private float countTime = 0.0f;
+    private int randNum;
 
     // Start is called before the first frame update
     void Start()
@@ -53,11 +56,27 @@ public class meteorInstantiation : MonoBehaviour
             elapsedTime = 0;
             for (int n=1; n<=spawnCount; n++)
             {
-                posX = Random.Range(-5, 5);
-                posZ = Random.Range(-5, 5);
-                posY = Random.Range(35, 40);
+                randNum = Random.Range(1, 3);
+                posX = Random.Range(-9, 2);
+                posZ = Random.Range(-4, 4);
+                posY = Random.Range(40, 45);
 
-                Instantiate(meteor, new Vector3(posX, posY, posZ), Quaternion.identity);
+                if (randNum == 1)
+                {
+                    Instantiate(meteor1, new Vector3(posX, posY, posZ), Quaternion.identity);
+                }
+
+                else if (randNum == 2)
+                {
+                    Instantiate(meteor2, new Vector3(posX, posY, posZ), Quaternion.identity);
+                }
+
+                else
+                {
+                    Instantiate(meteor3, new Vector3(posX, posY, posZ), Quaternion.identity);
+                }
+
+                
             }
             
         } 

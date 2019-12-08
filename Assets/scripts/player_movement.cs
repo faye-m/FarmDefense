@@ -17,7 +17,7 @@ public class player_movement : MonoBehaviour
     void Update()
     {
 
-        transform.Translate(Input.GetAxis("Mouse X"), 0, Input.GetAxis("Mouse Y"));
+        transform.Translate(Input.GetAxis("Mouse Y"), 0, -Input.GetAxis("Mouse X"));
 
         //transform.Translate(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         clampPosition();
@@ -29,17 +29,17 @@ public class player_movement : MonoBehaviour
 
         //clamps the position of the player to set bounds so that the player doesnt go out of bounds
 
-        if (transform.position.z <= -9f || transform.position.z >= 9f)
+        if (transform.position.z <= -9f || transform.position.z >= 4f)
         {
             print("Code for clamping Z postion here.");
-            clampPos.z = Mathf.Clamp(clampPos.z, -9f, 9f);
+            clampPos.z = Mathf.Clamp(clampPos.z, -9f, 4f);
             transform.position = clampPos;
         }
 
-        if (transform.position.x <= -9f || transform.position.x >= 9f)
+        if (transform.position.x <= -14f || transform.position.x >= 2f)
         {
             print("Code for clamping X postion here.");
-            clampPos.x = Mathf.Clamp(clampPos.x, -9f, 9f);
+            clampPos.x = Mathf.Clamp(clampPos.x, -14f, 2f);
             transform.position = clampPos;
         }
 
