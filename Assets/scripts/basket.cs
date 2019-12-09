@@ -22,6 +22,7 @@ public class basket : MonoBehaviour
         // adds total points whenever a meteor is caught in the basket, also destroys the meteor to make it disappear
         if (other.gameObject.tag == "meteor1" || other.gameObject.tag == "meteor2" || other.gameObject.tag == "meteor3")
         {
+            ScoreScript.scoreValue += 1;
             Destroy(other.gameObject);
             score++;
             print(score);
