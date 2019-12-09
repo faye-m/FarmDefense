@@ -35,8 +35,8 @@ public class meteorInstantiation : MonoBehaviour
     {
         elapsedTime += Time.deltaTime;
         countTime++;
-        
 
+        //spawnTime = 1; //testing
         //this bit of code lessens the time between object spawning when the countTime has no remainder when divided by the number
         if (countTime % 300 == 0)
         {
@@ -56,9 +56,9 @@ public class meteorInstantiation : MonoBehaviour
             elapsedTime = 0;
             for (int n=1; n<=spawnCount; n++)
             {
-                randNum = Random.Range(1, 3);
-                posX = Random.Range(-9, 2);
-                posZ = Random.Range(-4, 4);
+                randNum = Random.Range(1, 4);
+                posX = Random.Range(-12, 1);
+                posZ = Random.Range(-3, 3);
                 posY = Random.Range(40, 45);
 
                 if (randNum == 1)

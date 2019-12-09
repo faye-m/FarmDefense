@@ -20,7 +20,7 @@ public class dropsOnHouse : MonoBehaviour
     //code checks for collisions on the object and destroys the object that collides with it
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag=="meteor")
+        if (other.gameObject.tag == "meteor1" || other.gameObject.tag == "meteor2" || other.gameObject.tag == "meteor3")
         {
             Destroy(other.gameObject);
             //houseHP--;

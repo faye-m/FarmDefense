@@ -13,9 +13,10 @@ GameObject:
   - component: {fileID: 5066387278109439533}
   - component: {fileID: -4438716151165661277}
   - component: {fileID: -132176058416676869}
+  - component: {fileID: -1109466507815850772}
   m_Layer: 0
   m_Name: meteor_01
-  m_TagString: meteor
+  m_TagString: meteor1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -108,3 +109,22 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 19.769968
   m_Center: {x: 2.0197206, y: 19.493269, z: -1.236742}
+--- !u!114 &-1109466507815850772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6805988444634301169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ac838417f9009294586259f0614a879e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 800173250626582966, guid: 2207413a006f4664a82d1b28c9367586, type: 3}
+  planeMid: {fileID: 6351583236674508440, guid: c3d1b79be35e81b4995ec86386669f1a,
+    type: 3}
+  planeL1: {fileID: 97371078278154221, guid: da4aeb968adc2c748841db9bc18e25cc, type: 3}
+  planeL2: {fileID: 1199434052157195723, guid: 45295bc1bc33487438c8267f452f1af2, type: 3}
+  planeR1: {fileID: 742847701863430889, guid: 55804b91e01d1454293f5e652f4bd105, type: 3}
+  planeR2: {fileID: 4481915868889215381, guid: 3b524b901c935ac468c0767e2e95a698, type: 3}

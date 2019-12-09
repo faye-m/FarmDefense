@@ -16,10 +16,10 @@ public class player_movement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        movementMultiplier = Time.deltaTime * 10;
+        transform.Translate(Input.GetAxis("Mouse Y") * movementMultiplier, 0, -Input.GetAxis("Mouse X") * movementMultiplier);
 
-        transform.Translate(Input.GetAxis("Mouse Y"), 0, -Input.GetAxis("Mouse X"));
-
-        //transform.Translate(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+        //transform.Translate(Input.GetAxis("Vertical"), 0, -Input.GetAxis("Horizontal"));
         clampPosition();
         
     }
@@ -29,17 +29,17 @@ public class player_movement : MonoBehaviour
 
         //clamps the position of the player to set bounds so that the player doesnt go out of bounds
 
-        if (transform.position.z <= -9f || transform.position.z >= 4f)
+        if (transform.position.z <= -11f || transform.position.z >= 9f)
         {
             print("Code for clamping Z postion here.");
-            clampPos.z = Mathf.Clamp(clampPos.z, -9f, 4f);
+            clampPos.z = Mathf.Clamp(clampPos.z, -11f, 9f);
             transform.position = clampPos;
         }
 
-        if (transform.position.x <= -14f || transform.position.x >= 2f)
+        if (transform.position.x <= -17f || transform.position.x >= 6f)
         {
             print("Code for clamping X postion here.");
-            clampPos.x = Mathf.Clamp(clampPos.x, -14f, 2f);
+            clampPos.x = Mathf.Clamp(clampPos.x, -17f, 6f);
             transform.position = clampPos;
         }
 

@@ -20,7 +20,7 @@ public class basket : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         // adds total points whenever a meteor is caught in the basket, also destroys the meteor to make it disappear
-        if (other.gameObject.tag=="meteor")
+        if (other.gameObject.tag == "meteor1" || other.gameObject.tag == "meteor2" || other.gameObject.tag == "meteor3")
         {
             Destroy(other.gameObject);
             score++;
